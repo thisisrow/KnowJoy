@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 
 const ChuckNorrisJoke = () => {
-    const [data, setData] = useState(null); // Initialize as null to avoid rendering issues.
+    const [data, setData] = useState(null); 
 
     useEffect(() => {
         const fetchData = async () => {
@@ -14,7 +14,7 @@ const ChuckNorrisJoke = () => {
                     }
                 });
                 setData(response.data);
-                console.log(response.data); // Log the data to confirm the structure.
+                console.log(response.data); 
             } catch (error) {
                 alert("Failed to fetch data: " + error.message);
             }
@@ -27,7 +27,7 @@ const ChuckNorrisJoke = () => {
             <div className="card">
                 <div className="card-body">
                     <h5 className="card-title">Chuck Norris Joke</h5>
-                    {data ? ( // Check if data is loaded
+                    {data ? ( 
                         <p className="card-text">{data.joke}</p>
                     ) : (
                         <p>Loading...</p>
