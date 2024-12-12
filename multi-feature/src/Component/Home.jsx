@@ -15,6 +15,11 @@ const Home = () => {
             id: 2,
             title: "Dad Jokes",
             to: 'DadJokes',
+        },
+        {
+            id: 3,
+            title: "Riddles",
+            to: 'Riddles',
         }
     ];
     const about = [

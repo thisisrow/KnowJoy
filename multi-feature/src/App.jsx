@@ -1,12 +1,12 @@
 import React from 'react'
 import { BrowserRouter,Routes,Route,useNavigate } from 'react-router-dom'
 import Home from './Component/Home'
-import ChuckNorrisJoke from './Component/Joke/ChuckNorrisJoke'
-import DadJokes from './Component/Joke/DadJokes'
+import ChuckNorrisJoke from './Component/Entertainment/ChuckNorrisJoke'
+import DadJokes from './Component/Entertainment/DadJokes'
 import AboutAnimal from './Component/About/AboutAnimal'
 import AboutCelebrity from './Component/About/AboutCelebrity'
 import AboutWebsite from './Component/About/AboutWebsite'
-
+import Riddles from './Component/Entertainment/Riddles'
 function App() {
 
   return (
@@ -19,6 +19,7 @@ function App() {
       <Route path="/AboutAnimal" element={<AboutAnimal />} />
       <Route path="/AboutCelebrity" element={<AboutCelebrity />} />
       <Route path="/AboutWebsite" element={<AboutWebsite />} />
+      <Route path="/Riddles" element={<Riddles />} />
     </Routes>
     </BrowserRouter>
       
