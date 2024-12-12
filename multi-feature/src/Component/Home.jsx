@@ -63,7 +63,7 @@ const Home = () => {
         <div className="container mt-5">
             <div className="content mb-4">
                 <h1 className="animated-text">
-                    Welcome to <span>{currentWord}</span>
+                    Welcome <span>{currentWord}</span>
                 </h1>
                 <h5>This website is designed to provide entertainment, knowledge, and health/wellness information.</h5>
             </div>
