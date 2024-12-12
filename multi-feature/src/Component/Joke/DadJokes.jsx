@@ -7,7 +7,9 @@ const DadJokes = () => {
     const [dadJoke, setDadJoke] = useState(""); 
 
     useEffect(() => {
+        
         const fetchData = async () => {
+            
             try {
                 const response = await axios.get("https://api.api-ninjas.com/v1/dadjokes", {
                     headers: {
@@ -37,8 +39,11 @@ const DadJokes = () => {
                     <p className="card-text">{dadJoke}</p>
                 </div>
             </div>
-
+            <div className="btn btn-primary m-3" onClick={() => navigate(-1)}>
+                Go Back
+            </div>
         </div>
+        
     );
 };
 

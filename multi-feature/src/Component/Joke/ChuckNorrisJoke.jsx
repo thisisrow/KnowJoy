@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
-
+import { useNavigate } from "react-router-dom";
 const ChuckNorrisJoke = () => {
+    const navigate = useNavigate(); 
     const [data, setData] = useState(null); 
 
     useEffect(() => {
@@ -24,7 +25,7 @@ const ChuckNorrisJoke = () => {
 
     return (
         <div className="container">
-            <div className="card">
+            <div className="card mt-5">
                 <div className="card-body">
                     <h5 className="card-title">Chuck Norris Joke</h5>
                     {data ? ( 
@@ -33,6 +34,9 @@ const ChuckNorrisJoke = () => {
                         <p>Loading...</p>
                     )}
                 </div>
+            </div>
+            <div className="btn btn-primary m-3" onClick={() => navigate(-1)}>
+                Go Back
             </div>
         </div>
     );
