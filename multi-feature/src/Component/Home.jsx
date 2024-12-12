@@ -55,7 +55,7 @@ const Home = () => {
     };
 
     useEffect(() => {
-        const interval = setInterval(changeWord, 4700);
+        const interval = setInterval(changeWord, 2000);
         return () => clearInterval(interval);
     }, []);
 
