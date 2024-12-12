@@ -10,6 +10,7 @@ import AboutWebsite from './Component/About/AboutWebsite'
 import Cocktail from './Component/Health/Cocktail'
 import Exercises from './Component/Health/Exercises'
 import Recipe from './Component/Health/Recipe'
+// import "./Home.css"
 function App() {
 
   return (

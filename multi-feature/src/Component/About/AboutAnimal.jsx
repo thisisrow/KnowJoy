@@ -59,8 +59,8 @@ function AboutAnimal() {
 
 
             {animal ?  (
-                <div className="card mt-3">
-                    <div className="card-body">
+                <div className="card mt-3 ">
+                    <div className="card-body ">
                         <h5 className="card-title">{animal.name}</h5>
                         <p><strong>Scientific Name:</strong> {animal.taxonomy.scientific_name}</p>
                         <p><strong>Kingdom:</strong> {animal.taxonomy.kingdom}</p>
