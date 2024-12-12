@@ -4,7 +4,8 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 const DadJokes = () => {
     const navigate = useNavigate(); 
-    const [dadJoke, setDadJoke] = useState(""); 
+    const [dadJoke, setDadJoke] = useState("");
+    const key = import.meta.env.VITE_KEY; 
 
     useEffect(() => {
         
@@ -13,7 +14,7 @@ const DadJokes = () => {
             try {
                 const response = await axios.get("https://api.api-ninjas.com/v1/dadjokes", {
                     headers: {
-                        "X-Api-Key": "mFoJ26zBZ5TIRxhiJCzmMA==JJMyAVy3EXSdZvLh",
+                        "X-Api-Key": key,
                     },
                 });
 

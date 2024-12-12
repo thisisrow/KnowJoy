@@ -5,25 +5,25 @@ import { useNavigate } from 'react-router-dom';
 
 function AboutAnimal() {
     const navigate = useNavigate();
-    const [animal, setAnimal] = useState(null); 
-    const [name, setName] = useState(''); 
-
-    
+    const [animal, setAnimal] = useState(null);
+    const [name, setName] = useState('');
+    const key = import.meta.env.VITE_KEY;
+ 
     const fetchAnimal = async (animalName) => {
         try {
             const response = await axios.get(`https://api.api-ninjas.com/v1/animals?name=${animalName}`, {
                 headers: {
-                    "X-Api-Key": "mFoJ26zBZ5TIRxhiJCzmMA==JJMyAVy3EXSdZvLh",
+                    "X-Api-Key":key,
                 }
             });
             if (response.data.length > 0) {
-                setAnimal(response.data[0]); 
+                setAnimal(response.data[0]);
             } else {
-                setAnimal(null); 
+                setAnimal(null);
             }
         } catch (error) {
             console.error("Error fetching animal data:", error);
-            setAnimal(null); 
+            setAnimal(null);
         }
     };
 
@@ -39,24 +39,27 @@ function AboutAnimal() {
     return (
         <div className="container mt-4">
             <h1>About Animal</h1>
-            <form onSubmit={handleSubmit} className="mb-4">
-                <div className="row m-2">
-                    <div className="col-xl-6">
-                        <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Enter animal name"
-                            value={name}
-                            onChange={(e) => setName(e.target.value)} 
-                        />
-                        <button type="submit" className="btn btn-primary mt-3">Search</button>
+            <div className="card p-3">
+                <form onSubmit={handleSubmit} className="mb-4">
+                    <div className="row m-2">
+                        <div className="col-xl-6">
+                            <h5>Enter Animal name</h5>
+                            <input
+                                type="text"
+                                className="form-control"
+                                placeholder="Enter animal name"
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
+                            />
+                            <button type="submit" className="btn btn-primary mt-3">Search</button>
+                        </div>
                     </div>
-                </div>
-            </form>
+                </form>
+            </div>
 
-        
-            {animal ? (
-                <div className="card m-2">
+
+            {animal ?  (
+                <div className="card mt-3">
                     <div className="card-body">
                         <h5 className="card-title">{animal.name}</h5>
                         <p><strong>Scientific Name:</strong> {animal.taxonomy.scientific_name}</p>
@@ -79,7 +82,7 @@ function AboutAnimal() {
                     </div>
                 </div>
             ) : (
-                name && <p className="text-danger">No data found for "{name}".</p>
+                name && <p className="text-danger">Click Serch</p>
             )}
             <div className="btn btn-primary m-3" onClick={() => navigate('/')}>
                 Go Back

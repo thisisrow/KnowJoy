@@ -5,13 +5,14 @@ import { useNavigate } from "react-router-dom";
 const ChuckNorrisJoke = () => {
     const navigate = useNavigate(); 
     const [data, setData] = useState(null); 
+    const key = import.meta.env.VITE_KEY;
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const response = await axios.get(`https://api.api-ninjas.com/v1/chucknorris`, {
                     headers: {
-                        'X-Api-Key': 'mFoJ26zBZ5TIRxhiJCzmMA==JJMyAVy3EXSdZvLh'
+                        'X-Api-Key': key
                     }
                 });
                 setData(response.data);
@@ -24,7 +25,7 @@ const ChuckNorrisJoke = () => {
     }, []);
 
     return (
-        <div className="container">
+        <div className="container ">
             <div className="card mt-5">
                 <div className="card-body">
                     <h5 className="card-title">Chuck Norris Joke</h5>
