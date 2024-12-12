@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
+import { useNavigate } from 'react-router-dom';
 
 function AboutAnimal() {
+    const navigate = useNavigate();
     const [animal, setAnimal] = useState(null); 
     const [name, setName] = useState(''); 
 
@@ -79,6 +81,9 @@ function AboutAnimal() {
             ) : (
                 name && <p className="text-danger">No data found for "{name}".</p>
             )}
+            <div className="btn btn-primary m-3" onClick={() => navigate('/')}>
+                Go Back
+            </div>
         </div>
     );
 }

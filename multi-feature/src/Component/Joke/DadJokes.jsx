@@ -39,7 +39,7 @@ const DadJokes = () => {
                     <p className="card-text">{dadJoke}</p>
                 </div>
             </div>
-            <div className="btn btn-primary m-3" onClick={() => navigate(-1)}>
+            <div className="btn btn-primary m-3" onClick={() => navigate('/')}>
                 Go Back
             </div>
         </div>
