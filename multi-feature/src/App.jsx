@@ -3,10 +3,13 @@ import { BrowserRouter,Routes,Route,useNavigate } from 'react-router-dom'
 import Home from './Component/Home'
 import ChuckNorrisJoke from './Component/Entertainment/ChuckNorrisJoke'
 import DadJokes from './Component/Entertainment/DadJokes'
+import Riddles from './Component/Entertainment/Riddles'
 import AboutAnimal from './Component/About/AboutAnimal'
 import AboutCelebrity from './Component/About/AboutCelebrity'
 import AboutWebsite from './Component/About/AboutWebsite'
-import Riddles from './Component/Entertainment/Riddles'
+import Cocktail from './Component/Health/Cocktail'
+import Exercises from './Component/Health/Exercises'
+import Recipe from './Component/Health/Recipe'
 function App() {
 
   return (
@@ -20,6 +23,9 @@ function App() {
       <Route path="/AboutCelebrity" element={<AboutCelebrity />} />
       <Route path="/AboutWebsite" element={<AboutWebsite />} />
       <Route path="/Riddles" element={<Riddles />} />
+      <Route path="/Cocktail" element={<Cocktail />} />
+      <Route path="/Exercises" element={<Exercises />} />
+      <Route path="/Recipe" element={<Recipe />} />
     </Routes>
     </BrowserRouter>
       

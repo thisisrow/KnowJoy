@@ -39,6 +39,23 @@ const Home = () => {
             to: 'AboutCelebrity',
         }
     ];
+    const health = [
+        {
+            id: 1,
+            title: "Make Cocktail",
+            to: 'Cocktail',
+        },
+        {
+            id: 2,
+            title: "Exercises",
+            to: 'Exercises',
+        },
+        {
+            id: 3,
+            title: "Recipe",
+            to: 'Recipe',
+        }
+    ];
 
     return (
         <div className="container mt-5">
@@ -58,7 +75,7 @@ const Home = () => {
                     </div>
                 ))}
             </div>
-            <h3>About </h3>
+            <h3>Know About </h3>
             <div className="row justify-content-start">
                 {about.map((item) => (
                     <div className="col-md-4 mb-3" key={item.id}>
@@ -73,6 +90,22 @@ const Home = () => {
                     </div>
                 ))}
             </div>
+            <h3>Health/Wellness </h3>
+            <div className="row justify-content-start">
+                {health.map((item) => (
+                    <div className="col-md-4 mb-3" key={item.id}>
+                        <div className='card'>
+                            <div className="card-body">
+                                <h5 className="card-title">{item.title}</h5>
+                                <button className="btn btn-primary" onClick={() => navigate(item.to || '/')}>
+                                    Go to {item.title}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+
         </div>
     );
 };

@@ -43,7 +43,7 @@ function AboutCelebrity() {
                 <form onSubmit={handleSubmit} className="mb-4">
                     <div className="row m-2">
                         <div className="col-xl-6">
-                            <h5>Enter Animal name</h5>
+                            <h5>Enter Celebrity name</h5>
                             <input
                                 type="text"
                                 className="form-control"
