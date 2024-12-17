@@ -46,24 +46,16 @@ const Home = () => {
         }
     ];
 
-    const word = ['world!', 'bob!', 'user!', 'everyone!'];
-    const [currentWord, setCurrentWord] = useState(word[0]);
-
-    const changeWord = () => {
-        const newWord = word[Math.floor(Math.random() * word.length)];
-        setCurrentWord(newWord);
-    };
-
-    useEffect(() => {
-        const interval = setInterval(changeWord, 2000);
-        return () => clearInterval(interval);
-    }, []);
-
     return (
-        <div className="container mt-5">
+        <div className="container mt-1">
             <div className="content mb-4">
-                <h1 className="animated-text">
-                    Welcome <span>{currentWord}</span>
+                <h1 className="css-1dn3h68">Wellcome 
+                      <span color="#524FFC" className="wrapper css-konzt6">
+                        <span className="RollingText_word__ieJY1 word">user!</span>
+                        <span className="RollingText_word__ieJY1 word">world!</span>
+                        <span className="RollingText_word__ieJY1 word">bob!</span>
+                        <span className="RollingText_word__ieJY1 word">everyone!</span>
+                    </span>
                 </h1>
                 <h5>This website is designed to provide entertainment, knowledge, and health/wellness information.</h5>
             </div>
