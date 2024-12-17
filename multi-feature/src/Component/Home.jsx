@@ -55,6 +55,7 @@ const Home = () => {
                         <span className="RollingText_word__ieJY1 word">world!</span>
                         <span className="RollingText_word__ieJY1 word">bob!</span>
                         <span className="RollingText_word__ieJY1 word">everyone!</span>
+                        <span className="RollingText_word__ieJY1 word">buddy!</span>
                     </span>
                 </h1>
                 <h5>This website is designed to provide entertainment, knowledge, and health/wellness information.</h5>
